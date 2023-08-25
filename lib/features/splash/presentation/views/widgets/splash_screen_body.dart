@@ -1,6 +1,9 @@
 import 'package:fashion_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
+import 'main_text.dart';
+import 'second_text.dart';
+
 class SplashScreenBody extends StatelessWidget {
   const SplashScreenBody({super.key});
 
@@ -18,38 +21,40 @@ class SplashScreenBody extends StatelessWidget {
           ),
         ),
       ),
-      child: const Padding(
-        padding: EdgeInsets.all(20.0),
+      child: Padding(
+        padding: const EdgeInsets.all(20.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            SplashScreenMainText(),
+            const SplashScreenMainText(),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.01,
+            ),
+            const SecondTextSplashScreen(),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.02,
+            ),
+            SizedBox(
+              width: double.infinity,
+              height: MediaQuery.of(context).size.height * 0.07,
+              child: TextButton(
+                style: TextButton.styleFrom(
+                  backgroundColor: Colors.black,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(14.0),
+                  ),
+                ),
+                onPressed: () {},
+                child: Text(
+                  'GET STARTED',
+                  style: TextSytles.textStyle24.copyWith(
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
-      ),
-    );
-  }
-}
-
-class SplashScreenMainText extends StatelessWidget {
-  const SplashScreenMainText({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return RichText(
-      text: TextSpan(
-        text: 'Uncover your true ',
-        style: TextSytles.textStyle50,
-        children: [
-          TextSpan(
-            text: 'fashion sence',
-            style: TextSytles.textStyle50.copyWith(
-              decoration: TextDecoration.underline,
-            ),
-          ),
-        ],
       ),
     );
   }
