@@ -1,3 +1,4 @@
+import 'package:fashion_app/core/utils/app_router.dart';
 import 'package:fashion_app/features/splash/presentation/views/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -18,9 +19,8 @@ class MyApp extends StatelessWidget {
         splitScreenMode: true,
         builder: (_, child) {
           return const MaterialApp(
-            // debugShowCheckedModeBanner: false,
-            // theme: ThemeData(),
-            home: SplashScreen(),
+            initialRoute: '/',
+            onGenerateRoute: AppRouter.generateRoute,
           );
         });
   }
