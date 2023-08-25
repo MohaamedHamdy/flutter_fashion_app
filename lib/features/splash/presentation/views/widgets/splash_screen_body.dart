@@ -1,4 +1,5 @@
 import 'package:fashion_app/core/utils/styles.dart';
+import 'package:fashion_app/core/widgets/button.dart';
 import 'package:flutter/material.dart';
 
 import 'main_text.dart';
@@ -34,24 +35,15 @@ class SplashScreenBody extends StatelessWidget {
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.02,
             ),
-            SizedBox(
-              width: double.infinity,
+            CustomButton(
               height: MediaQuery.of(context).size.height * 0.07,
-              child: TextButton(
-                style: TextButton.styleFrom(
-                  backgroundColor: Colors.black,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(14.0),
-                  ),
-                ),
-                onPressed: () {},
-                child: Text(
-                  'GET STARTED',
-                  style: TextSytles.textStyle24.copyWith(
-                    color: Colors.white,
-                  ),
+              child: Text(
+                'GET STARTED',
+                style: TextSytles.textStyle24.copyWith(
+                  color: Colors.white,
                 ),
               ),
+              func: () {},
             ),
           ],
         ),

@@ -9,5 +9,6 @@ class AppRouter {
           builder: (_) => const SplashScreen(),
         );
     }
+    return null;
   }
 }
