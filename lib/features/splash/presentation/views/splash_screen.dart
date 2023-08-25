@@ -18,7 +18,8 @@ class SplashScreen extends StatelessWidget {
           ),
         ),
         centerTitle: true,
-        backgroundColor: const Color.fromRGBO(175, 144, 122, 1),
+        backgroundColor: Color.fromRGBO(175, 144, 122, 1),
+        elevation: 0.0,
       ),
       body: const SplashScreenBody(),
     );

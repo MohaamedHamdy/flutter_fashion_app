@@ -18,24 +18,37 @@ class SplashScreenBody extends StatelessWidget {
           ),
         ),
       ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
+      child: const Padding(
+        padding: EdgeInsets.all(20.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            splashScreenMainText(),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class splashScreenMainText extends StatelessWidget {
+  const splashScreenMainText({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return RichText(
+      text: TextSpan(
+        text: 'Uncover your true ',
+        style: TextSytles.textStyle50,
         children: [
-          SizedBox(
-            height: MediaQuery.of(context).size.height * 0.05,
-          ),
-          Text(
-            'TheSociety',
-            style: TextSytles.textStyle24.copyWith(
-              color: Colors.white,
-              fontWeight: FontWeight.w500,
+          TextSpan(
+            text: 'fashion sence',
+            style: TextSytles.textStyle50.copyWith(
+              decoration: TextDecoration.underline,
             ),
           ),
-          Column(
-            children: [
-              Text('Uncover your true fashion sence'),
-            ],
-          )
         ],
       ),
     );
