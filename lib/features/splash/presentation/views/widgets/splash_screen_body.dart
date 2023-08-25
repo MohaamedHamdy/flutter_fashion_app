@@ -23,7 +23,7 @@ class SplashScreenBody extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            splashScreenMainText(),
+            SplashScreenMainText(),
           ],
         ),
       ),
@@ -31,8 +31,8 @@ class SplashScreenBody extends StatelessWidget {
   }
 }
 
-class splashScreenMainText extends StatelessWidget {
-  const splashScreenMainText({
+class SplashScreenMainText extends StatelessWidget {
+  const SplashScreenMainText({
     super.key,
   });
 
