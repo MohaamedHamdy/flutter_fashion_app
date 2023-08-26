@@ -44,7 +44,7 @@ class _SecondSectionState extends State<SecondSection> {
                       selectedColor = index;
                     });
                   },
-                  child: colorsItem(
+                  child: ColorsItem(
                     selectedColor: selectedColor,
                     colors: colors,
                     index: index,
@@ -70,10 +70,10 @@ class _SecondSectionState extends State<SecondSection> {
   }
 }
 
-class colorsItem extends StatelessWidget {
+class ColorsItem extends StatelessWidget {
   final int index;
 
-  const colorsItem({
+  const ColorsItem({
     Key? key,
     required this.index,
     required this.selectedColor,

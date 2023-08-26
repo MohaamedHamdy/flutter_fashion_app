@@ -7,6 +7,7 @@ class CustomButton extends StatelessWidget {
   final double? radius;
   final Widget child;
   final Color? color;
+  // ignore: prefer_typing_uninitialized_variables
   final func;
 
   const CustomButton({

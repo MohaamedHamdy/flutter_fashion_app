@@ -32,7 +32,7 @@ class ItemDetailScreen extends StatelessWidget {
           ),
         ],
       ),
-      body: ItemDetailScreenBody(),
+      body: const ItemDetailScreenBody(),
     );
   }
 }
