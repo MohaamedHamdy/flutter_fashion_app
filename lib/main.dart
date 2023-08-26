@@ -17,9 +17,19 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (_, child) {
-        return const MaterialApp(
+        return MaterialApp(
           initialRoute: '/',
           onGenerateRoute: AppRouter.generateRoute,
+          theme: ThemeData(
+            appBarTheme: const AppBarTheme(
+              backgroundColor: Colors.transparent,
+              elevation: 0.0,
+              iconTheme: IconThemeData(
+                color: Colors.black,
+                size: 35,
+              ),
+            ),
+          ),
         );
       },
     );
