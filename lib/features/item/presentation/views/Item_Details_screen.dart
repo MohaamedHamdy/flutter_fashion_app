@@ -1,6 +1,8 @@
 import 'package:fashion_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
+import 'widgets/item_detail_screen_body.dart';
+
 class ItemDetailScreen extends StatelessWidget {
   const ItemDetailScreen({super.key});
 
@@ -30,7 +32,7 @@ class ItemDetailScreen extends StatelessWidget {
           ),
         ],
       ),
-      // body: ,
+      body: ItemDetailScreenBody(),
     );
   }
 }
