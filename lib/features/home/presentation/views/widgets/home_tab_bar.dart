@@ -17,6 +17,7 @@ class HomeTabBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TabBar(
+      physics: const BouncingScrollPhysics(),
       controller: _tabController,
       isScrollable: true,
       labelColor: Colors.white,

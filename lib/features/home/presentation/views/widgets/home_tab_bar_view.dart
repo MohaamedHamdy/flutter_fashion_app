@@ -14,8 +14,46 @@ class HomeTabBarView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: TabBarView(
+        physics: const BouncingScrollPhysics(),
         controller: _tabController,
         children: [
+          GridView.builder(
+            physics: const BouncingScrollPhysics(),
+            itemCount: 10,
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+              childAspectRatio: 0.53,
+              crossAxisSpacing: 10,
+              mainAxisSpacing: 0,
+            ),
+            itemBuilder: (context, index) => GridItem(
+              index: index,
+            ),
+          ),
+          GridView.builder(
+            itemCount: 10,
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+              childAspectRatio: 0.53,
+              crossAxisSpacing: 10,
+              mainAxisSpacing: 0,
+            ),
+            itemBuilder: (context, index) => GridItem(
+              index: index,
+            ),
+          ),
+          GridView.builder(
+            itemCount: 10,
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+              childAspectRatio: 0.53,
+              crossAxisSpacing: 10,
+              mainAxisSpacing: 0,
+            ),
+            itemBuilder: (context, index) => GridItem(
+              index: index,
+            ),
+          ),
           GridView.builder(
             itemCount: 10,
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
