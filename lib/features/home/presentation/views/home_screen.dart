@@ -50,7 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     isSearch = !isSearch;
                   });
                 },
-                decoration: InputDecoration(hintText: 'Search'),
+                decoration: const InputDecoration(hintText: 'Search'),
               ),
         centerTitle: true,
         actions: [
