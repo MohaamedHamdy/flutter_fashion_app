@@ -18,17 +18,28 @@ class DownWardArrow extends StatelessWidget {
             width: 3.0.w,
           ),
         ),
-        child: Center(
-          child: IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              Icons.arrow_outward_outlined,
-              size: 35,
-              color: Colors.black,
-              weight: 1,
-              fill: 1,
-            ),
-          ),
+        child: const ArrowButton(),
+      ),
+    );
+  }
+}
+
+class ArrowButton extends StatelessWidget {
+  const ArrowButton({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: IconButton(
+        onPressed: () {},
+        icon: const Icon(
+          Icons.arrow_outward_outlined,
+          size: 35,
+          color: Colors.black,
+          weight: 1,
+          fill: 1,
         ),
       ),
     );
