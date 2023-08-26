@@ -1,3 +1,4 @@
+import 'package:fashion_app/core/utils/app_router.dart';
 import 'package:fashion_app/core/utils/styles.dart';
 import 'package:fashion_app/core/widgets/button.dart';
 import 'package:flutter/material.dart';
@@ -43,7 +44,9 @@ class SplashScreenBody extends StatelessWidget {
                   color: Colors.white,
                 ),
               ),
-              func: () {},
+              func: () {
+                Navigator.pushNamed(context, AppRouter.kHomeScreen);
+              },
             ),
           ],
         ),
