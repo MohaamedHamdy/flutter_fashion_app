@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'package:fashion_app/core/utils/styles.dart';
 import 'package:fashion_app/core/widgets/button.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SecondSection extends StatefulWidget {
   const SecondSection({super.key});
@@ -18,6 +19,9 @@ class _SecondSectionState extends State<SecondSection> {
     Colors.black,
     Colors.green,
     Colors.blue,
+    Colors.pink,
+    Colors.orange,
+    Colors.cyanAccent,
   ];
 
   int selectedColor = -1;
@@ -27,7 +31,7 @@ class _SecondSectionState extends State<SecondSection> {
     return Column(
       children: [
         Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Text(
               '\$49.99',
@@ -35,19 +39,28 @@ class _SecondSectionState extends State<SecondSection> {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            Row(
-              children: List.generate(
-                colors.length,
-                (index) => InkWell(
-                  onTap: () {
-                    setState(() {
-                      selectedColor = index;
-                    });
-                  },
-                  child: ColorsItem(
-                    selectedColor: selectedColor,
-                    colors: colors,
-                    index: index,
+            SizedBox(
+              width: MediaQuery.of(context).size.width * 0.26,
+            ),
+            Expanded(
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: List.generate(
+                    colors.length,
+                    (index) => InkWell(
+                      onTap: () {
+                        setState(() {
+                          selectedColor = index;
+                        });
+                      },
+                      child: ColorsItem(
+                        selectedColor: selectedColor,
+                        colors: colors,
+                        index: index,
+                      ),
+                    ),
                   ),
                 ),
               ),
@@ -92,14 +105,14 @@ class ColorsItem extends StatelessWidget {
               shape: BoxShape.circle,
               border: Border.all(
                 color: colors[index],
-                width: 2.0,
+                width: 2.0.w,
               ),
             )
           : const BoxDecoration(),
       child: Padding(
         padding: const EdgeInsets.all(4.0),
         child: CircleAvatar(
-          maxRadius: 8,
+          maxRadius: 8.r,
           backgroundColor: colors[index],
         ),
       ),

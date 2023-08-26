@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         return MaterialApp(
           initialRoute: '/',
           onGenerateRoute: AppRouter.generateRoute,
-          theme: ThemeData(
+          theme: ThemeData.light().copyWith(
             appBarTheme: const AppBarTheme(
               backgroundColor: Colors.transparent,
               elevation: 0.0,
