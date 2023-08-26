@@ -1,3 +1,4 @@
+import 'package:fashion_app/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
 
 import 'grid_item.dart';
@@ -26,8 +27,13 @@ class HomeTabBarView extends StatelessWidget {
               crossAxisSpacing: 10,
               mainAxisSpacing: 0,
             ),
-            itemBuilder: (context, index) => GridItem(
-              index: index,
+            itemBuilder: (context, index) => GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, AppRouter.kItemDetailScreen);
+              },
+              child: GridItem(
+                index: index,
+              ),
             ),
           ),
           GridView.builder(
