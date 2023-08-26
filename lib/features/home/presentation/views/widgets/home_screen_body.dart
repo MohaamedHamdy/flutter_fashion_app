@@ -1,8 +1,12 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
+
 import 'package:fashion_app/core/utils/styles.dart';
+// import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import 'down_ward_arrow.dart';
 import 'home_tab_bar.dart';
+import 'home_tab_bar_view.dart';
 
 class HomeScreenBody extends StatefulWidget {
   const HomeScreenBody({super.key});
@@ -48,6 +52,10 @@ class _HomeScreenBodyState extends State<HomeScreenBody>
             height: MediaQuery.of(context).size.height * 0.02,
           ),
           HomeTabBar(tabController: _tabController, items: items),
+          const SizedBox(
+            height: 30,
+          ),
+          HomeTabBarView(tabController: _tabController),
         ],
       ),
     );
