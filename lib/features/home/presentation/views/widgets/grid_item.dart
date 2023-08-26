@@ -25,7 +25,7 @@ class GridItem extends StatelessWidget {
               image: const DecorationImage(
                 fit: BoxFit.cover,
                 image: AssetImage(
-                  'assets/images/splash.png',
+                  'assets/images/2.png',
                 ),
               ),
             ),
