@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TextSytles {
+  static final textStyle14 = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeight.normal,
+  );
   static final textStyle18 = TextStyle(
     fontSize: 18.sp,
     fontWeight: FontWeight.normal,

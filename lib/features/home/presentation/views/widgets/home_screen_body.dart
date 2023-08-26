@@ -1,7 +1,8 @@
-import 'package:fashion_app/core/utils/styles.dart';
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
-
+import 'package:fashion_app/core/utils/styles.dart';
 import 'down_ward_arrow.dart';
+import 'home_tab_bar.dart';
 
 class HomeScreenBody extends StatefulWidget {
   const HomeScreenBody({super.key});
@@ -14,16 +15,23 @@ class _HomeScreenBodyState extends State<HomeScreenBody>
     with SingleTickerProviderStateMixin {
   late TabController _tabController;
 
+  List items = [
+    'All',
+    'Shoes',
+    'Shirts',
+    'Bags',
+  ];
+
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: 4, vsync: this);
+    _tabController = TabController(length: items.length, vsync: this);
   }
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(20.0),
+      padding: const EdgeInsets.all(16.0),
       child: Column(
         children: [
           Row(
@@ -36,6 +44,10 @@ class _HomeScreenBodyState extends State<HomeScreenBody>
               const DownWardArrow(),
             ],
           ),
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.02,
+          ),
+          HomeTabBar(tabController: _tabController, items: items),
         ],
       ),
     );
