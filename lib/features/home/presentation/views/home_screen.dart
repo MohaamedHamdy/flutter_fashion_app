@@ -20,6 +20,7 @@ class _HomeScreenState extends State<HomeScreen> {
         child: ListView(
           children: [
             const DrawerHeader(
+              decoration: BoxDecoration(color: Colors.blue),
               child: Text('Side Menu'),
             ),
             ListTile(

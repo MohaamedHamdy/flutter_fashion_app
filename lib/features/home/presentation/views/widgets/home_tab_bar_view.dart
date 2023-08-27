@@ -36,17 +36,8 @@ class HomeTabBarView extends StatelessWidget {
               ),
             ),
           ),
-          GridView.builder(
-            itemCount: 10,
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2,
-              childAspectRatio: 0.53,
-              crossAxisSpacing: 10,
-              mainAxisSpacing: 0,
-            ),
-            itemBuilder: (context, index) => GridItem(
-              index: index,
-            ),
+          const Center(
+            child: Text('fsafas'),
           ),
           GridView.builder(
             itemCount: 10,
