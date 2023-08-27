@@ -21,7 +21,7 @@ class GridItem extends StatelessWidget {
             height: 260,
             width: 180,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
+              borderRadius: BorderRadius.circular(10.r),
               image: const DecorationImage(
                 fit: BoxFit.cover,
                 image: AssetImage(
@@ -30,17 +30,17 @@ class GridItem extends StatelessWidget {
               ),
             ),
           ),
-          const SizedBox(
-            height: 8,
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.008,
           ),
           const Text(
-            'Black Cycling shorts sojasfjsads',
+            'High Protection Swift Sunglasses ',
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
             style: TextStyle(fontWeight: FontWeight.w900),
           ),
-          const SizedBox(
-            height: 3,
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.005,
           ),
           const Text(
             '\$ 49.99',
